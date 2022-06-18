@@ -19,6 +19,7 @@ def catalogue_reader(file_path):
         return result
 
 
-pprint(catalogue_reader(full_path))
+cook_book = catalogue_reader(full_path)
+pprint(cook_book)
 
 
