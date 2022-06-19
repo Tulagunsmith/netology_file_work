@@ -20,6 +20,6 @@ def catalogue_reader(file_path):
 
 
 cook_book = catalogue_reader(full_path)
-pprint(cook_book)
+# pprint(cook_book)
 
 
