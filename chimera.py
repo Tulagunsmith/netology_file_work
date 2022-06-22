@@ -1,5 +1,3 @@
-import os
-base_path = os.getcwd()
 file_name_1 = '1.txt'
 file_name_2 = '2.txt'
 file_name_3 = '3.txt'
@@ -28,18 +26,14 @@ def mega_file_reader(mega_dict, file_dict):
     return sorted_mega_dict
 
 
-def file_writer(file_name):
-    with open(file_name, 'a') as text:
-        text.write(f'{crap["name"]}\n')
-        text.write(f'{str(crap["length"])}\n')
-        for line in crap['data']:
-            text.write(line)
-
-
-#file_writer(chimera_file)
+def chimera_writer(frankenstein, chimera):
+    with open(frankenstein, 'a') as text:
+        for number, data in chimera.items():
+            text.write(f'{data["name"]}\n')
+            text.write(f'{number}\n')
+            for line in data['data']:
+                text.write(f'{line.strip()}\n')
 
 
 mega_file = mega_file_reader(mega_file, files)
-print(mega_file)
-crap = file_reader(file_name_1)
-print(crap)
+chimera_writer(chimera_file, mega_file)
